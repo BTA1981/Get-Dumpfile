@@ -1,7 +1,7 @@
 Start-Transcript -Path C:\_Beheer\dumpfiles.log
 import-module activedirectory
 $ErrorActionPreference = 'silentlycontinue'
-$xenappservers = Get-ADComputer -filter * -SearchBase "OU=NVIDIA-GRID,OU=Produktie,OU=XenApp78,OU=Servers,DC=Corp,DC=nl" | Sort-Object Name
+$xenappservers = Get-ADComputer -filter * -SearchBase "" | Sort-Object Name
 
 foreach ($computer in $xenappservers) {
     $fqdn = ''
